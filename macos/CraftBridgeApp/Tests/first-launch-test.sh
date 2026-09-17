@@ -37,7 +37,7 @@ start_app() {
 
 wait_for_log() {
   for attempt in {1..80}; do
-    if [[ -f "$log" ]] && rg -q 'launch pid=' "$log"; then return 0; fi
+    if [[ -f "$log" ]] && grep -q 'launch pid=' "$log"; then return 0; fi
     if ! kill -0 "$app_pid" 2>/dev/null; then
       print -u2 'Craft Bridge exited before its first-launch diagnostics were written.'
       return 1
@@ -107,7 +107,7 @@ runtime="$support/craft-obsidian-bridge/runtime"
 [[ -f "$runtime/current/dist/src/daemon.js" ]]
 [[ -f "$support/craft-obsidian-bridge/bridge.token" ]]
 [[ -f "$support/craft-obsidian-bridge/index.sqlite" ]]
-"$runtime/current/node/bin/node" --version | rg -q '^v22\.23\.2$'
+"$runtime/current/node/bin/node" --version | grep -q '^v22\.23\.2$'
 stop_app
 
 print 'first-launch-test: PASS (clean onboarding, isolated Vault, bundled Node, RPC health, daemon shutdown)'

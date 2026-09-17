@@ -23,7 +23,7 @@ fi
 (cd "$release_dir" && shasum -a 256 -c SHA256SUMS)
 
 zip_has_entry() {
-  unzip -Z1 "$1" | rg -Fx "$2" >/dev/null
+  unzip -Z1 "$1" | grep -F -x "$2" >/dev/null
 }
 
 for required in \
@@ -47,12 +47,12 @@ runtime_manifest="$(unzip -p "$release_dir/$app_zip" CraftBridge.app/Contents/Re
 print -r -- "$runtime_manifest" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const m=JSON.parse(s);if(m.schemaVersion!==1||!Array.isArray(m.files)||!m.files.length||m.files.some(f=>typeof f.path!=="string"||typeof f.sha256!=="string"))process.exit(1)})'
 
 plugin_entries="$(unzip -Z1 "$release_dir/$plugin_zip")"
-if print -r -- "$plugin_entries" | rg -e '(^|/)\._|^__MACOSX/' >/dev/null; then
+if print -r -- "$plugin_entries" | grep -E '(^|/)\._|^__MACOSX/' >/dev/null; then
   print -u2 'Plugin ZIP must not contain macOS resource-fork metadata.'
   exit 1
 fi
-plugin_manifest_path="$(print -r -- "$plugin_entries" | rg '(^|/)manifest\.json$' | head -n 1)"
-plugin_main_path="$(print -r -- "$plugin_entries" | rg '(^|/)main\.js$' | head -n 1)"
+plugin_manifest_path="$(print -r -- "$plugin_entries" | grep -E -m 1 '(^|/)manifest\.json$' || true)"
+plugin_main_path="$(print -r -- "$plugin_entries" | grep -E -m 1 '(^|/)main\.js$' || true)"
 if [[ -z "$plugin_manifest_path" || -z "$plugin_main_path" ]]; then
   print -u2 'Plugin ZIP must include manifest.json and main.js.'
   exit 1
