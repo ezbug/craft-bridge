@@ -137,7 +137,8 @@ export class LocalBridgeDaemon {
 }
 
 async function loadOrCreateToken(stateDir: string): Promise<string> {
-  await mkdir(stateDir, { recursive: true });
+  await mkdir(stateDir, { recursive: true, mode: 0o700 });
+  await chmod(stateDir, 0o700);
   const path = join(stateDir, "bridge.token");
   try {
     const existing = (await readFile(path, "utf8")).trim();

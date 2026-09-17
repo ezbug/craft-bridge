@@ -1,4 +1,4 @@
-import { mkdir, mkdtemp, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, stat, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -24,6 +24,8 @@ describe("local Obsidian index", () => {
   it("searches Chinese short queries and resolves backlinks without indexing .obsidian", async () => {
     const { bridge } = await fixture();
     expect(bridge.status().indexedFiles).toBe(2);
+    expect((await stat(bridge.config.stateDir)).mode & 0o777).toBe(0o700);
+    expect((await stat(bridge.config.backupDir)).mode & 0o777).toBe(0o700);
     expect(bridge.index.search("桥", undefined, undefined, 8)[0]?.title).toBe("桥接");
     expect(bridge.index.search("MCP", undefined, "MCP", 8)[0]?.path).toBe("Draft/桥接.md");
     expect(bridge.index.backlinks("Draft/桥接.md").backlinks[0]?.sourcePath).toBe("入口.md");

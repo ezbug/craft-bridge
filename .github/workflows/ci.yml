@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bridge:
+    name: Bridge · test, lint, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.2
+      - run: npm ci
+        working-directory: obsidian-bridge
+      - run: npm test
+        working-directory: obsidian-bridge
+      - run: npm run lint
+        working-directory: obsidian-bridge
+      - run: npm run build
+        working-directory: obsidian-bridge
+
+  plugin:
+    name: Obsidian plugin · test, lint, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.2
+      - run: npm ci
+        working-directory: obsidian-plugin
+      - run: npm test
+        working-directory: obsidian-plugin
+      - run: npm run lint
+        working-directory: obsidian-plugin
+      - run: npm run build
+        working-directory: obsidian-plugin
+
+  macos-core:
+    name: macOS Core · Swift and release structure
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.2
+      - run: swift build --package-path macos/CraftBridgeApp
+      - run: swift run --package-path macos/CraftBridgeApp CraftBridgeCoreTests
+      - run: zsh macos/CraftBridgeApp/Tests/install-runtime-test.sh
+      - run: zsh macos/CraftBridgeApp/Tests/release-package-test.sh
+      - name: Check public source, version alignment, and release manifest
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import re
+          import subprocess
+          import sys
+
+          tracked = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
+          blocked = [
+              re.compile("/Users/" + re.escape("sexpistole" + "111")),
+              re.compile(re.escape("bug" + "bg"), re.IGNORECASE),
+              re.compile(r"https://connect" + r"\.craft\.do/link/(?!demo(?:/|$)|test(?:/|$))[^\s\"']+", re.IGNORECASE),
+              re.compile(r"(?i)Bearer\s+[A-Za-z0-9._~-]{32,}"),
+          ]
+          failures = []
+          for name in filter(None, tracked):
+              path = pathlib.Path(name)
+              try:
+                  content = path.read_text(encoding="utf-8")
+              except (UnicodeDecodeError, OSError):
+                  continue
+              for pattern in blocked:
+                  if pattern.search(content):
+                      failures.append(f"{name}: matched a private-path, Vault-name, or non-demo Craft API URL pattern")
+                      break
+          if failures:
+              print("\n".join(failures), file=sys.stderr)
+              sys.exit(1)
+
+          plist = pathlib.Path("macos/CraftBridgeApp/Info.plist").read_text()
+          app_version = re.search(r"<key>CFBundleShortVersionString</key>\s*<string>([^<]+)", plist).group(1)
+          import json
+          bridge_version = json.loads(pathlib.Path("obsidian-bridge/package.json").read_text())["version"]
+          plugin_version = json.loads(pathlib.Path("obsidian-plugin/manifest.json").read_text())["version"]
+          if len({app_version, bridge_version, plugin_version}) != 1:
+              raise SystemExit(f"App/Bridge/plugin version mismatch: {app_version}, {bridge_version}, {plugin_version}")
+          print(f"Public-tree scan and App/Bridge/plugin version check passed ({app_version}).")
+          PY

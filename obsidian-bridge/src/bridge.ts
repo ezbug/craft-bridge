@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
-import { mkdir } from "node:fs/promises";
+import { chmod, mkdir } from "node:fs/promises";
 import { assertExistingNote } from "./safe-path.js";
 import { IndexStore } from "./index-store.js";
 import { LinkManager } from "./link-manager.js";
@@ -19,8 +19,10 @@ export class ObsidianBridge {
   }
 
   static async create(config: BridgeConfig): Promise<ObsidianBridge> {
-    await mkdir(config.stateDir, { recursive: true });
-    await mkdir(config.backupDir, { recursive: true });
+    await mkdir(config.stateDir, { recursive: true, mode: 0o700 });
+    await chmod(config.stateDir, 0o700);
+    await mkdir(config.backupDir, { recursive: true, mode: 0o700 });
+    await chmod(config.backupDir, 0o700);
     const store = await IndexStore.open(config.dbPath);
     return new ObsidianBridge(config, store);
   }
