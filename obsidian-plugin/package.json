@@ -1,0 +1,14 @@
+{
+  "name": "craft-obsidian-bridge-plugin",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit && node build.mjs",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test build.test.mjs && tsx --test polling.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

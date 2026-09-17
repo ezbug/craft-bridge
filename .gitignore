@@ -1,0 +1,34 @@
+# macOS and editor noise
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+**/bridge.token
+**/config.local.json
+
+# Generated dependencies and builds
+**/node_modules/
+**/dist/
+**/build/
+**/.build/
+**/.swiftpm/
+
+# Local databases, logs, and release output
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+/release/
+/artifacts/
+*.zip
+*.dmg
+*.app/
