@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFAF7"/><stop offset="1" stop-color="#F0EDF8"/></linearGradient>
+    <filter id="sh" x="0" y="0" width="1" height="1"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#29253A" flood-opacity=".09"/></filter>
+    <style>.t{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#2F2F3A}.m{fill:#777787}.label{font-size:14px;font-weight:700;letter-spacing:1.3px}.title{font-size:27px;font-weight:700}.small{font-size:15px}</style>
+  </defs>
+  <rect width="1440" height="480" rx="32" fill="url(#bg)"/>
+  <text x="64" y="66" class="t label" fill="#7C3AED">CRAFT BRIDGE · USER FLOW</text>
+  <text x="64" y="108" class="t title">从当前页面到可验证的双向链接</text>
+  <text x="64" y="137" class="t small m">按快捷键打开另一边的搜索结果；写入始终由你确认</text>
+  <g filter="url(#sh)">
+    <rect x="70" y="214" width="154" height="104" rx="18" fill="#FFFFFF"/><rect x="256" y="214" width="154" height="104" rx="18" fill="#F4F0FC"/><rect x="442" y="214" width="154" height="104" rx="18" fill="#FFFFFF"/><rect x="628" y="214" width="154" height="104" rx="18" fill="#F4F0FC"/><rect x="814" y="214" width="154" height="104" rx="18" fill="#FFFFFF"/><rect x="1000" y="214" width="154" height="104" rx="18" fill="#F4F0FC"/><rect x="1186" y="214" width="184" height="104" rx="18" fill="#2F2F3A"/>
+  </g>
+  <path d="M226 266h22m-8-8 8 8-8 8M412 266h22m-8-8 8 8-8 8M598 266h22m-8-8 8 8-8 8M784 266h22m-8-8 8 8-8 8M970 266h22m-8-8 8 8-8 8M1156 266h22m-8-8 8 8-8 8" stroke="#22C1C3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="106" cy="252" r="14" fill="#7C3AED" opacity=".13"/><path d="M99 252h14M106 245v14" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/><text x="130" y="257" class="t" font-size="17" font-weight="700">Craft /</text><text x="100" y="286" class="t" font-size="17" font-weight="700">Obsidian</text>
+  <rect x="281" y="241" width="42" height="33" rx="9" fill="#7C3AED"/><text x="302" y="263" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#fff">⌘⌥O</text><text x="331" y="257" class="t" font-size="16" font-weight="700">打开搜索</text><text x="281" y="290" class="t small m">快捷键或菜单栏</text>
+  <circle cx="477" cy="252" r="12" stroke="#7C3AED" stroke-width="2"/><path d="m486 261 9 9" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/><text x="505" y="257" class="t" font-size="16" font-weight="700">搜索另一端</text><text x="466" y="290" class="t small m">本地索引 / Craft API</text>
+  <rect x="654" y="240" width="37" height="38" rx="9" fill="#22C1C3" opacity=".2"/><path d="M666 249h14M666 255h14M666 261h9" stroke="#168B90" stroke-width="2" stroke-linecap="round"/><text x="704" y="257" class="t" font-size="16" font-weight="700">选择结果</text><text x="652" y="290" class="t small m">跳转或建立回链</text>
+  <rect x="840" y="240" width="37" height="38" rx="9" fill="#7C3AED" opacity=".13"/><path d="M850 250h17v17h-17zM854 254h9M854 259h9" stroke="#7C3AED" stroke-width="1.7" stroke-linejoin="round"/><text x="890" y="257" class="t" font-size="16" font-weight="700">先预览</text><text x="838" y="290" class="t small m">检查两个目标</text>
+  <circle cx="1028" cy="256" r="12" fill="#22C1C3"/><path d="m1022 256 4 4 8-9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1050" y="257" class="t" font-size="16" font-weight="700">确认写入</text><text x="1024" y="290" class="t small m">再次按 Enter</text>
+  <circle cx="1217" cy="253" r="12" fill="#22C1C3"/><path d="m1211 253 4 4 8-9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1241" y="259" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">双端验证</text><text x="1214" y="289" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" fill="#C1BECE">失败可回滚</text>
+  <text x="720" y="386" text-anchor="middle" class="t small m">搜索不会自动写入 · 预览阶段不修改内容 · 侦测到并发编辑时停止并提示</text>
+</svg>

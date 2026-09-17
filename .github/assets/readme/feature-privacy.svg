@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFAF7"/><stop offset="1" stop-color="#F0EDF8"/></linearGradient>
+    <filter id="sh" x="0" y="0" width="1" height="1"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#29253A" flood-opacity=".11"/></filter>
+    <style>.t{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#2F2F3A}.m{fill:#777787}.label{font-size:14px;font-weight:700;letter-spacing:1.3px}.title{font-size:27px;font-weight:700}.body{font-size:18px}.small{font-size:15px}</style>
+  </defs>
+  <rect width="1440" height="760" rx="32" fill="url(#bg)"/>
+  <text x="64" y="66" class="t label" fill="#7C3AED">CRAFT BRIDGE · DATA FLOW MOCKUP</text>
+  <text x="64" y="108" class="t title">你的 Vault 留在本机；Craft 请求按需发生</text>
+  <text x="64" y="137" class="t small m">示意图 · 展示储存位置与请求边界，不表示离线连接 Craft</text>
+  <g filter="url(#sh)"><rect x="78" y="186" width="790" height="444" rx="25" fill="#FFFFFF" stroke="#E8E5EE"/><rect x="970" y="232" width="382" height="350" rx="25" fill="#2F2F3A"/></g>
+  <rect x="78" y="186" width="790" height="60" rx="25" fill="#F4F1FB"/><path d="M78 224v22h790v-22" fill="#F4F1FB"/>
+  <circle cx="116" cy="216" r="17" fill="#7C3AED" opacity=".12"/><path d="M109 216h14m-7-7v14" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  <text x="150" y="222" class="t body" font-weight="700">你的 Mac · 仅本机应用和文件</text>
+  <rect x="112" y="276" width="228" height="176" rx="18" fill="#FAF9FD" stroke="#E6E2ED"/>
+  <rect x="132" y="296" width="38" height="38" rx="11" fill="#22C1C3" opacity=".2"/><path d="M144 306h14M144 312h14M144 318h8" stroke="#168B90" stroke-width="2" stroke-linecap="round"/>
+  <text x="132" y="365" class="t body" font-weight="700">Obsidian Vault</text><text x="132" y="393" class="t small m">Markdown 原文</text><text x="132" y="420" class="t small m">用户选定的目录</text>
+  <rect x="374" y="276" width="228" height="176" rx="18" fill="#F6F2FD" stroke="#E1D7F6"/>
+  <circle cx="404" cy="315" r="19" fill="#7C3AED" opacity=".13"/><path d="M395 315h18M404 306v18" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  <text x="404" y="365" class="t body" font-weight="700">本机 Bridge</text><text x="394" y="393" class="t small m">索引 · 缓存 · 备份</text><text x="394" y="420" class="t small m">RPC：127.0.0.1</text>
+  <rect x="636" y="276" width="198" height="176" rx="18" fill="#F1FAF9" stroke="#D6EFED"/>
+  <rect x="661" y="296" width="38" height="38" rx="11" fill="#22C1C3" opacity=".18"/><path d="M672 307h16v15h-16zM676 303h8" stroke="#168B90" stroke-width="1.8" stroke-linejoin="round"/>
+  <text x="660" y="365" class="t body" font-weight="700">macOS Keychain</text><text x="660" y="393" class="t small m">Craft API Connection</text><text x="660" y="420" class="t small m">不在 config.json</text>
+  <path d="M340 361h29m-9-9 9 9-9 9M602 361h29m-9-9 9 9-9 9" stroke="#22C1C3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="112" y="482" width="722" height="102" rx="16" fill="#F7F6F3"/>
+  <circle cx="147" cy="516" r="14" fill="#22C1C3"/><path d="m140 516 5 5 9-11" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="174" y="520" class="t body" font-weight="700">Vault 索引与回滚备份不离开本机</text>
+  <text x="144" y="552" class="t small m">Craft 搜索 / 写入：只通过你设置的 Craft API Connection 按需请求</text>
+  <text x="1004" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1.3" fill="#A8A6B5">按需访问</text>
+  <circle cx="1050" cy="330" r="25" fill="#7C3AED" opacity=".28"/><path d="M1041 337v-13a9 9 0 0 1 18 0v13m-21 0h24v16h-24z" stroke="#D4C5FF" stroke-width="2" stroke-linejoin="round"/>
+  <text x="1091" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Craft Space API</text>
+  <text x="1091" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#C1BECE">授权范围由你在 Craft 中选择</text>
+  <rect x="1010" y="404" width="302" height="64" rx="14" fill="#3A3946" stroke="#53515F"/>
+  <text x="1032" y="431" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="650" fill="#FFFFFF">① 搜索 Craft 文档</text><text x="1032" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#B8B6C5">有搜索请求时访问</text>
+  <rect x="1010" y="482" width="302" height="64" rx="14" fill="#3A3946" stroke="#53515F"/>
+  <text x="1032" y="509" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="650" fill="#FFFFFF">② 用户确认后写入 Card</text><text x="1032" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#B8B6C5">预览后才执行</text>
+  <path d="M868 380h88m-11-10 11 10-11 10" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M956 430h-88m11-10-11 10 11 10" stroke="#22C1C3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="700" text-anchor="middle" class="t small m">Local-first 不等于完全离线：访问 Craft 时需要网络，且遵循用户配置的 API Connection 权限范围</text>
+</svg>

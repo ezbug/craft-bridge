@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFAF7"/><stop offset="1" stop-color="#F0EDF8"/></linearGradient>
+    <filter id="sh" x="0" y="0" width="1" height="1"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#29253A" flood-opacity=".12"/></filter>
+    <style>.t{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#2F2F3A}.m{fill:#777787}.label{font-size:14px;font-weight:700;letter-spacing:1.3px}.title{font-size:26px;font-weight:700}.body{font-size:18px}.small{font-size:15px}</style>
+  </defs>
+  <rect width="1440" height="760" rx="32" fill="url(#bg)"/>
+  <text x="64" y="66" class="t label" fill="#7C3AED">CRAFT BRIDGE · INTERACTION MOCKUP</text>
+  <text x="64" y="108" class="t title">完整预览两边内容，再决定是否写入</text>
+  <text x="64" y="137" class="t small m">交互示意 · 虚构内容、URL 与 ID · 对应 App 实际显示的预览字段，不是窗口截图</text>
+  <g filter="url(#sh)"><rect x="72" y="180" width="610" height="438" rx="22" fill="#FFFFFF" stroke="#E8E5EE"/><rect x="758" y="180" width="610" height="438" rx="22" fill="#FFFFFF" stroke="#E8E5EE"/></g>
+  <rect x="72" y="180" width="610" height="66" rx="22" fill="#F5F2FC"/><path d="M72 224v22h610v-22" fill="#F5F2FC"/>
+  <circle cx="108" cy="213" r="17" fill="#7C3AED" opacity=".12"/><path d="M101 207h14M101 213h14M101 219h9" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  <text x="140" y="210" class="t body" font-weight="700">1 · Craft · Project Lantern</text><text x="140" y="232" class="t small m">虚构 Craft Space · Regular Card</text>
+  <text x="104" y="292" class="t label m">CRAFT REGULAR CARD MARKDOWN</text>
+  <rect x="104" y="312" width="546" height="207" rx="16" fill="#FAF9FD" stroke="#E8E3F3"/>
+  <text x="124" y="345" font-family="Menlo,monospace" font-size="12" fill="#5D3AA8">&lt;page textStyle='card' cardLayout='regular'&gt;</text>
+  <text x="124" y="373" font-family="Menlo,monospace" font-size="11" fill="#42404D">&lt;pageTitle&gt;[专注笔记](obsidian://open?…)&lt;/pageTitle&gt;</text>
+  <text x="124" y="401" font-family="Menlo,monospace" font-size="11" fill="#42404D">[打开 Obsidian 笔记](obsidian://open?…)</text>
+  <text x="124" y="429" font-family="Menlo,monospace" font-size="10" fill="#777787">&lt;caption&gt;Obsidian · Guides/Focus.md · ID: demo&lt;/caption&gt;</text>
+  <text x="124" y="457" font-family="Menlo,monospace" font-size="11" fill="#42404D">摘要：每周安排一段安静的专注时间。</text>
+  <text x="124" y="485" font-family="Menlo,monospace" font-size="12" fill="#5D3AA8">&lt;/page&gt;</text>
+  <text x="104" y="552" class="t small" fill="#357B73">✓ Card Markdown 全文预览</text><text x="374" y="552" class="t small" fill="#357B73">✓ 确认后写入</text>
+  <text x="104" y="584" class="t small" fill="#357B73">✓ Vault 外备份</text><text x="278" y="584" class="t small" fill="#357B73">✓ 原子替换</text><text x="428" y="584" class="t small" fill="#357B73">✓ 读回验证</text>
+  <rect x="758" y="180" width="610" height="66" rx="22" fill="#F1FAF9"/><path d="M758 224v22h610v-22" fill="#F1FAF9"/>
+  <circle cx="794" cy="213" r="17" fill="#22C1C3" opacity=".19"/><path d="M787 207h14M787 213h14M787 219h9" stroke="#168B90" stroke-width="2" stroke-linecap="round"/>
+  <text x="826" y="210" class="t body" font-weight="700">2 · Obsidian · Focus.md</text><text x="826" y="232" class="t small m">虚构 Vault · Harbor Notes</text>
+  <text x="790" y="292" class="t label m">OBSIDIAN CALLOUT LINK LINE</text>
+  <rect x="790" y="312" width="546" height="207" rx="16" fill="#FFFFFF" stroke="#E8E5EE"/>
+  <rect x="816" y="334" width="494" height="46" rx="10" fill="#F1FAF9"/>
+  <text x="834" y="363" class="t small" fill="#167F82" font-weight="700">受管 Callout 中新增的链接行</text>
+  <text x="816" y="418" font-family="Menlo,monospace" font-size="12" fill="#42404D">&gt; - [Project Lantern · kickoff]</text>
+  <text x="816" y="443" font-family="Menlo,monospace" font-size="12" fill="#42404D">  (craftdocs://open?blockId=DEMO)</text>
+  <text x="816" y="480" class="t small m">预览显示实际将追加的 Markdown 链接行</text>
+  <text x="790" y="560" class="t small" fill="#357B73">✓ 用户确认后写入</text><text x="978" y="560" class="t small" fill="#357B73">✓ 并发修改时拒绝覆盖</text>
+  <rect x="72" y="648" width="1296" height="70" rx="18" fill="#2F2F3A"/>
+  <circle cx="111" cy="683" r="17" fill="#22C1C3"/><path d="M104 683h14m-5-6 6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="146" y="690" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" fill="#FFFFFF"><tspan font-weight="700">第一次 Enter</tspan><tspan fill="#B8B7C5">  查看 Card 与链接行全文</tspan><tspan fill="#777787">      →      </tspan><tspan font-weight="700">再次 Enter</tspan><tspan fill="#B8B7C5">  确认写入</tspan><tspan fill="#777787">      ·      </tspan><tspan fill="#B8B7C5">并发改动时拒绝覆盖</tspan></text>
+</svg>

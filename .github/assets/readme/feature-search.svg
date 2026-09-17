@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFAF7"/><stop offset="1" stop-color="#F1EEFA"/></linearGradient>
+    <linearGradient id="glow" x1="500" y1="350" x2="970" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED" stop-opacity=".18"/><stop offset="1" stop-color="#22C1C3" stop-opacity=".2"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#29253A" flood-opacity=".12"/></filter>
+    <style>.t{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#2F2F3A}.muted{fill:#777787}.small{font-size:15px}.label{font-size:14px;font-weight:700;letter-spacing:1.4px}.title{font-size:27px;font-weight:700}.body{font-size:18px}.micro{font-size:12px}</style>
+  </defs>
+  <rect width="1440" height="760" rx="32" fill="url(#bg)"/>
+  <circle cx="178" cy="92" r="150" fill="#22C1C3" opacity=".08"/><circle cx="1320" cy="670" r="250" fill="#7C3AED" opacity=".06"/>
+  <text x="64" y="66" class="t label" fill="#7C3AED">CRAFT BRIDGE · INTERACTION MOCKUP</text>
+  <text x="64" y="108" class="t title">从当前工作位置，搜索另一边的知识</text>
+  <text x="64" y="137" class="t small muted">示意图 · Harbor Notes 与 Project Lantern 均为虚构演示资料</text>
+  <g filter="url(#shadow)">
+    <rect x="72" y="184" width="552" height="474" rx="24" fill="#FFFFFF" stroke="#E9E7EF"/>
+    <rect x="816" y="184" width="552" height="474" rx="24" fill="#2F2F3A"/>
+  </g>
+  <circle cx="104" cy="216" r="7" fill="#FA776E"/><circle cx="126" cy="216" r="7" fill="#F4C35E"/><circle cx="148" cy="216" r="7" fill="#56C87A"/>
+  <text x="182" y="222" class="t small muted">Craft Bridge · Search</text>
+  <rect x="96" y="248" width="504" height="58" rx="14" fill="#F7F5FB" stroke="#DDD7EF"/>
+  <circle cx="124" cy="277" r="9" stroke="#7C3AED" stroke-width="2.5"/><path d="m131 284 8 8" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="154" y="283" class="t body">quiet workspace</text>
+  <rect x="496" y="262" width="86" height="30" rx="8" fill="#ECE8F8"/><text x="509" y="282" class="t micro" fill="#6740BC">⌘⌥O</text>
+  <text x="100" y="344" class="t label muted">SEARCHING OBSIDIAN</text>
+  <rect x="96" y="364" width="504" height="72" rx="14" fill="#F5F2FC" stroke="#D8CCF7"/>
+  <rect x="116" y="382" width="35" height="35" rx="10" fill="#7C3AED" opacity=".13"/><path d="M127 392h13M127 398h13M127 404h9" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  <text x="168" y="393" class="t body" font-weight="650">Quiet hours for deep work</text>
+  <text x="168" y="416" class="t small muted">Guides / Focus.md · matching paragraph…</text>
+  <rect x="96" y="450" width="504" height="72" rx="14" fill="#FFFFFF" stroke="#EEEAF5"/>
+  <rect x="116" y="468" width="35" height="35" rx="10" fill="#22C1C3" opacity=".16"/><path d="M127 478h13M127 484h13M127 490h9" stroke="#168B90" stroke-width="2" stroke-linecap="round"/>
+  <text x="168" y="479" class="t body" font-weight="650">A calmer weekly review</text>
+  <text x="168" y="502" class="t small muted">Journal / Weekly rhythm.md · 2 links</text>
+  <rect x="96" y="536" width="504" height="72" rx="14" fill="#FFFFFF" stroke="#EEEAF5"/>
+  <rect x="116" y="554" width="35" height="35" rx="10" fill="#F4C35E" opacity=".22"/><path d="M127 564h13M127 570h13M127 576h9" stroke="#A27513" stroke-width="2" stroke-linecap="round"/>
+  <text x="168" y="565" class="t body" font-weight="650">Desk reset checklist</text>
+  <text x="168" y="588" class="t small muted">Projects / Studio.md · updated yesterday</text>
+  <text x="838" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#A9A9B9">Craft Bridge · Search</text>
+  <rect x="840" y="248" width="504" height="58" rx="14" fill="#383844" stroke="#4B4B59"/>
+  <circle cx="868" cy="277" r="9" stroke="#A78BFA" stroke-width="2.5"/><path d="m875 284 8 8" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="898" y="283" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" fill="#F8F7FC">lantern launch</text>
+  <rect x="1240" y="262" width="86" height="30" rx="8" fill="#484258"/><text x="1253" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" fill="#D6C7FF">⌘⌥O</text>
+  <text x="844" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1.4" fill="#A9A9B9">SEARCHING CRAFT</text>
+  <rect x="840" y="364" width="504" height="72" rx="14" fill="#403B52" stroke="#8B72C9"/>
+  <rect x="860" y="382" width="35" height="35" rx="10" fill="#A78BFA" opacity=".35"/><path d="M871 392h13M871 398h13M871 404h9" stroke="#D6C7FF" stroke-width="2" stroke-linecap="round"/>
+  <text x="912" y="393" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" fill="#FFFFFF">Project Lantern · kickoff</text>
+  <text x="912" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#C2C0CE">Space / Product · matching blocks…</text>
+  <rect x="840" y="450" width="504" height="72" rx="14" fill="#383844" stroke="#4B4B59"/>
+  <rect x="860" y="468" width="35" height="35" rx="10" fill="#22C1C3" opacity=".22"/><path d="M871 478h13M871 484h13M871 490h9" stroke="#76E6E5" stroke-width="2" stroke-linecap="round"/>
+  <text x="912" y="479" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" fill="#FFFFFF">Notes from the field</text>
+  <text x="912" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#C2C0CE">Research / Interviews · 4 blocks</text>
+  <rect x="840" y="536" width="504" height="72" rx="14" fill="#383844" stroke="#4B4B59"/>
+  <rect x="860" y="554" width="35" height="35" rx="10" fill="#F4C35E" opacity=".2"/><path d="M871 564h13M871 570h13M871 576h9" stroke="#F3D182" stroke-width="2" stroke-linecap="round"/>
+  <text x="912" y="565" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" fill="#FFFFFF">Launch checklist</text>
+  <text x="912" y="588" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" fill="#C2C0CE">Operations / Release · 6 blocks</text>
+  <rect x="628" y="380" width="184" height="114" rx="24" fill="url(#glow)"/>
+  <path d="M674 414h47m-10-10 10 10-10 10M766 460h-47m10-10-10 10 10 10" stroke="#22C1C3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="720" cy="438" r="18" fill="#FFFFFF" stroke="#D9D1EF"/><path d="M712 438h16M720 430v16" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  <text x="720" y="704" text-anchor="middle" class="t small muted">前台应用决定搜索方向 · 结果始终回到原始文档</text>
+</svg>
